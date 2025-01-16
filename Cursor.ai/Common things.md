@@ -1,0 +1,1 @@
+AI rules cursor https://cursor.directory/
