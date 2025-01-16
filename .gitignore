@@ -1,2 +1,21 @@
 .aider*
 .env
+# API kulcsok
+api_keys.env
+
+# IDE specifikus fájlok
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Környezeti változók
+.env
+.env.local
+.env.development
+.env.test
+.env.production
