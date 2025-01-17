@@ -1,0 +1,34 @@
+.aider*
+.env
+# API kulcsok
+api_keys.env
+
+# IDE specifikus fájlok
+.idea/
+.vscode/
+__pycache__/
+/__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Környezeti változók
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# általában üres mappák
+# Allow empty uploads and logs directories
+# Szükséges az üres mappák létrehozása és bele a .gitkeep fájl
+uploads/*
+!uploads/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# Virtuális környezet és tesztek
+/venv
+/tests
