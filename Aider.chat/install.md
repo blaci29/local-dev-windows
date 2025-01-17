@@ -26,10 +26,7 @@
    ```
 
 4. PATH beállítása:
-   - Ha a telepítés után hibaüzenetet kapsz a PATH hiányáról, futtasd a következő parancsot:
-   ```powershell
-   [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Users\blaci\.pyenv\pyenv-win\versions\3.13.1\Scripts", [EnvironmentVariableTarget]::User)
-   ```
+   - Ha a telepítés után hibaüzenetet kapsz a PATH hiányáról, futtasd a kírt parancsot.
 
 5. Virtuális környezetben használat:
    - Aider használható virtuális környezetben is:
@@ -37,6 +34,11 @@
    python -m venv venv
    .\venv\Scripts\Activate.ps1
    python -m pip install aider-install
+   ```
+
+   5. A /help parancshoz előbb telepíteni kell az alábbi csomagot:
+   ```powershell
+   python.exe -m pip install --upgrade --upgrade-strategy only-if-needed aider-chat[help] --extra-index-url https://download.pytorch.org/whl/cpu
    ```
 
 ## Hibaelhárítás
