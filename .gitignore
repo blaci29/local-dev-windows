@@ -8,9 +8,7 @@ gac.bat
 
 # Aider.chat
 .aider*
-Aider.chat/install.md
 Aider.chat/Apikeys/api_keys.sample.env
-api_keys.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
