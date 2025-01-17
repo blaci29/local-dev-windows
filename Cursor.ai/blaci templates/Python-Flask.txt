@@ -1,0 +1,8 @@
+Python/Flask
+  - Use def for function definitions.
+  - Use type hints for all function signatures where possible.
+  - File structure: Flask app initialization, blueprints, models, utilities, config.
+  - Avoid unnecessary curly braces in conditional statements.
+  - For single-line statements in conditionals, omit curly braces.
+  - Use concise, one-line syntax for simple conditional statements (e.g., if condition: do_something()).
+

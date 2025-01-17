@@ -1,0 +1,41 @@
+
+## Általános szabályok
+1. Minden kódmódosítást Git-en keresztül kell nyomon követni
+2. Commit üzenetek formátuma: `<típus>: <rövid leírás>`
+   - Példák: `feat: Add new transcription endpoint`, `fix: Resolve audio file upload issue`
+3. Minden új funkcióhoz tartozzon megfelelő dokumentáció
+
+## Kódolási stílus
+- Indentálás: 4 szóköz
+- Változónevek: snake_case
+- Osztálynevek: PascalCase
+- Konstansok: UPPER_SNAKE_CASE
+- Sor hossz: max 120 karakter
+
+## Dokumentáció
+- Minden új funkcióhoz készüljön markdown dokumentáció a `docs` mappában
+- API végpontok dokumentációja Swagger/OpenAPI specifikációval
+- Fontosabb technikai döntések rögzítése ADR (Architectural Decision Record) formátumban
+
+## Tesztelés
+- Egységtesztek a `tests` mappában
+- Minden új funkcióhoz tartozzon legalább 1 teszt eset
+- Teszt lefedettség cél: minimum 80%
+
+## Biztonság
+- Minden függőség ellenőrizve legyen biztonsági rések szempontjából
+- Titkos adatok soha ne kerüljenek verziókövetésbe
+- Minden külső API hívás HTTPS protokollon keresztül
+
+## CI/CD
+- Automatikus teszt futtatás minden pull request-nél
+- Linting ellenőrzés a kód minőségének biztosítására
+- Automatikus dokumentáció generálás
+
+## Hibajavítási folyamat
+1. Hibajegy létrehozása
+2. Hibát reprodukáló teszt eset létrehozása
+3. Hibajavítás
+4. Teszt futtatás
+5. Dokumentáció frissítése
+6. Pull request létrehozása

@@ -29,7 +29,6 @@ logs/*
 
 # Virtuális környezet és tesztek
 /venv
-/tests
 
 # Aider.chat
 .aider*
