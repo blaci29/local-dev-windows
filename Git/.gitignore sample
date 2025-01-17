@@ -1,5 +1,3 @@
-.aider*
-.env
 # API kulcsok
 api_keys.env
 
@@ -32,3 +30,6 @@ logs/*
 # Virtuális környezet és tesztek
 /venv
 /tests
+
+# Aider.chat
+.aider*
