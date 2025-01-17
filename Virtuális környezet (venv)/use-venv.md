@@ -19,6 +19,9 @@ A virtuális környezet (venv) egy izolált Python környezet, ami lehetővé te
    - Kattints az "Install Now" gombra
 5. Várd meg a telepítés befejezését
 
+> 💡 **Megjegyzés**: Ha több Python verzióval szeretnél dolgozni, vagy specific verzióra van szükséged, 
+> nézd meg a [Python verziókezelés (pyenv)](../Python%20verziókezelés/pyenv.md) útmutatót.
+
 ### 2. VS Code vagy Cursor telepítése
 1. VS Code: https://code.visualstudio.com/ vagy Cursor: https://cursor.sh/
 2. Telepítsd az alkalmazást (alap beállítások megfelelőek)
@@ -73,10 +76,16 @@ Most már két módon is dolgozhatsz:
 #### B. Külön PowerShell ablakban:
 1. Nyiss egy PowerShell ablakot
 2. Navigálj a projekt mappájába (cd paranccsal)
-3. Aktiváld a környezetet:
+3. Aktiváld a környezetet 
+
+a) (cmd azaz command prompt):
    ```powershell
    .\venv\Scripts\activate
    ```
+b) (PowerShell):
+   ```powershell
+   .\venv\Scripts\Activate.ps1
+   ```de
 
 ### 4. Csomagok telepítése
 A virtuális környezet aktiválása után:
