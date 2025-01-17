@@ -24,23 +24,23 @@
 
 setlocal EnableDelayedExpansion
 
-REM Debug információk
+:: Debug információk
 set "DEBUG=true"
 set "STATUS_FILE=.git-status-temp.txt"
 
-REM Paraméter ellenőrzése és feldolgozása
+:: Paraméter ellenőrzése és feldolgozása
 set "EXTRA_MSG="
 if not "%~1"=="" (
     set "EXTRA_MSG= | %~1"
 )
 
-REM Ellenőrizzük, hogy git repo-ban vagyunk-e
+:: Ellenőrizzük, hogy git repo-ban vagyunk-e
 if not exist ".git" (
     echo [HIBA] Nem git repository-ban vagy!
     exit /b 1
 )
 
-REM Branch név lekérdezése - javított verzió
+:: Branch név lekérdezése - javított verzió
 for /f "tokens=*" %%i in ('git rev-parse --abbrev-ref HEAD 2^>nul') do (
     set "BRANCH_NAME=%%i"
 )
@@ -49,14 +49,14 @@ if not defined BRANCH_NAME (
     echo [HIBA] Branch nev lekerdezese sikertelen
     echo [INFO] Ellenorzom a git telepiteset es a repository allapotot...
     
-    REM Git elérhetőség ellenőrzése
+    :: Git elérhetőség ellenőrzése
     git --version >nul 2>&1
     if errorlevel 1 (
         echo [HIBA] A git parancs nem elerheto. Kerem ellenorizze, hogy a Git telepitve van-e es szerepel-e a PATH-ban.
         exit /b 1
     )
     
-    REM Git repo ellenőrzése
+    :: Git repo ellenőrzése
     git rev-parse --git-dir >nul 2>&1
     if errorlevel 1 (
         echo [HIBA] Nem git repository vagy a .git mappa serult.
@@ -68,14 +68,13 @@ if not defined BRANCH_NAME (
 
 if %DEBUG%==true echo [DEBUG] Branch nev: %BRANCH_NAME%
 
-
-REM Dátum és idő lekérése
+:: Dátum és idő lekérése
 for /f "tokens=2 delims==" %%I in ('wmic os get localdatetime /value') do set datetime=%%I
 set DATUM=%datetime:~0,4%-%datetime:~4,2%-%datetime:~6,2% %datetime:~8,2%:%datetime:~10,2%
 
 echo [DEBUG] Datum: %DATUM%
 
-REM Git státusz lekérése
+:: Git státusz lekérése
 git status --porcelain > "%STATUS_FILE%" 2>&1
 if %errorlevel% neq 0 (
     echo [HIBA] Git status lekerdezese sikertelen
