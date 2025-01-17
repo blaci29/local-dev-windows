@@ -41,6 +41,17 @@
    python.exe -m pip install --upgrade --upgrade-strategy only-if-needed aider-chat[help] --extra-index-url https://download.pytorch.org/whl/cpu
    ```
 
+6. Aider.chat futtatása:
+a) Először menj a prjockt könyvtárba
+b) futtasd kézzel pl deepseek -el : 
+```powershell
+aider --model deepseek/deepseek-chat --api-key deepseek=key
+```
+c) az .env-sample-t nevezd át szabd testre helyezd a prjoekt gyökérbe és futtasd az aidert:
+```powershell
+aider
+```   
+
 ## Hibaelhárítás
 
 - **Hiba: 'python' nem ismert parancs**
